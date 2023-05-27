@@ -131,22 +131,129 @@
 
 // Sharpener Task //
 // Make the 2nd item have green background color //
-var secondList = document.querySelector('.list-group-item:nth-child(2)');
-secondList.style.backgroundColor = 'green';
+// var secondList = document.querySelector('.list-group-item:nth-child(2)');
+// secondList.style.backgroundColor = 'green';
 
 // Make the 3rd item invisible //
-var thirdList = document.querySelector('.list-group-item:nth-child(3)');
-thirdList.style.display = 'none'; 
+// var thirdList = document.querySelector('.list-group-item:nth-child(3)');
+// thirdList.style.display = 'none'; 
 
 // Using QuerySelectorALL change the font color to green for 2nd item in the item list //
 
-var lists = document.querySelectorAll('.list-group-item');
-lists[1].style.color = 'green';
+// var lists = document.querySelectorAll('.list-group-item');
+// lists[1].style.color = 'green';
 
 // Choose all the odd elements and make their background green using QuerySelectorALL﻿ //
-var odd = document.querySelectorAll('li:nth-child(odd)');
-for(var i =0;i<odd.length;i++)
-{
-    odd[i].style.backgroundColor = 'green';
-}
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// for(var i =0;i<odd.length;i++)
+// {
+//     odd[i].style.backgroundColor = 'green';
+// }
+
+// TRAVERSING THE DOM //
+var itemList = document.querySelector('#items');
+
+// parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4'; 
+// console.log(itemList.parentNode.parentNode);
+
+// parentElement //
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4'; 
+// console.log(itemList.parentElement.parentElement);
+
+// childNodes //
+// console.log(itemList.childNodes); // we dont use this much as it will incudes whitespaces 
+
+// children //
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor = 'yellow'
+
+// firstChild - it is also same as childNodes incudes whitespaces //
+// console.log(itemList.firstChild);
+
+// firstElementChild //
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello 1';
+
+// lastChild - it is also same as childNodes incudes whitespaces //
+// console.log(itemList.lastChild);
+
+// lastElementChild //
+// console.log(itemList.lastElementChild);
+// itemList.lastElementChild.textContent = 'Hello 4';
+
+// nextSibling - includes whitespaces //
+// console.log(itemList.nextSibling);
+
+// nextElementSibling //
+// console.log(itemList.nextElementSibling);
+
+// previousSibling //
+// console.log(itemList.previousSibling);
+
+// previousElementSibling //
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+// --------------------------------//
+
+// Create DOM elements //
+
+// createElement
+// create a div
+// var newDiv = document.createElement('div');
+
+// add class
+// newDiv.className = 'hello';
+
+// add id
+// newDiv.id = 'hello1';
+
+// set attribute
+// newDiv.setAttribute('title','Hello div'); //(attribute_name,value)
+
+// create text node
+// var newDivText = document.createTextNode('Hello World');
+
+// add text to div
+// newDiv.appendChild(newDivText);
+
+// till now we created a element to insert it follow 
+// we are going to insert inside header tag and below div tag and before h1 tag
+
+// var container = document.querySelector('header .container'); // (parent_tag_name class_name)
+// var h1 = document.querySelector('header h1'); (parent_tag_name tag_name)
+
+// console.log(newDiv);
+
+// newDiv.style.fontSize = '30px'
+
+// container.insertBefore(newDiv,h1);
+
+// Sharpener Task //
+// 1. Now go ahead and add HEllo word before Item Lister
+
+var newDiv = document.createElement('div');
+var newDivText = document.createTextNode('HEllo');
+newDiv.appendChild(newDivText);
+
+var container = document.querySelector('header .container'); 
+var h1 = document.querySelector('header h1');
+
+container.insertBefore(newDiv,h1);
+
+// 2. Now go head and add HEllo word before Item 1
+
+var newDiv = document.createElement('div');
+var newDivText = document.createTextNode('HEllo');
+newDiv.appendChild(newDivText);
+
+var ul = document.querySelector('div .list-group');
+var li = document.querySelector('div li')
+ul.insertBefore(newDiv,li);
+
+
 
