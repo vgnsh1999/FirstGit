@@ -39,25 +39,49 @@
 // addItem[0].style.backgroundColor = 'green'
 
 // GETELEMENTBYCLASSNAME //
-var items = document.getElementsByClassName('list-group-item');
-// console.log(items);
-// console.log(items[1]);
-// items[1].textContent = 'Hello 2';
-// items[1].style.fontWeight = 'bold';
-// items[1].style.backgroundColor = 'yellow';
+// var items = document.getElementsByClassName('list-group-item');
+// // console.log(items);
+// // console.log(items[1]);
+// // items[1].textContent = 'Hello 2';
+// // items[1].style.fontWeight = 'bold';
+// // items[1].style.backgroundColor = 'yellow';
+
+// // this will not work and give error as items is a collection of array so we need to use //
+// // looping statement to change the color //
+// //items.style.backgroundColor = 'grey'; // dom.js:51 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+// // at dom.js:51:29 
+
+// // for(var i=0; i<items.length;i++)
+// // {
+// //     items[i].style.backgroundColor = 'grey';
+// // }
+
+// items[2].style.backgroundColor = 'green';
+// for(var i=0;i<items.length;i++)
+// {
+//     items[i].style.fontWeight = 'bold';
+// }
+
+var li = document.getElementsByTagName('li');
+// console.log(li);
+// console.log(li[1]);
+// li[1].textContent = 'Hello 2';
+// li[1].style.fontWeight = 'bold';
+// li[1].style.backgroundColor = 'yellow';
 
 // this will not work and give error as items is a collection of array so we need to use //
 // looping statement to change the color //
-//items.style.backgroundColor = 'grey'; // dom.js:51 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+// li.style.backgroundColor = 'grey'; // dom.js:51 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
 // at dom.js:51:29 
 
-// for(var i=0; i<items.length;i++)
+// for(var i=0; i<li.length;i++)
 // {
-//     items[i].style.backgroundColor = 'grey';
+//     li[i].style.backgroundColor = 'grey';
 // }
 
-items[2].style.backgroundColor = 'green';
-for(var i=0;i<items.length;i++)
-{
-    items[i].style.fontWeight = 'bold';
-}
+//added new li tag and made changes //
+li[4].style.backgroundColor = 'green';
+
+var item = document.getElementsByClassName('list-group-item1');
+item[0].style.fontWeight = 'bold';
+//-----------------//
