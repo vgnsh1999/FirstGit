@@ -62,7 +62,7 @@
 //     items[i].style.fontWeight = 'bold';
 // }
 
-var li = document.getElementsByTagName('li');
+//var li = document.getElementsByTagName('li');
 // console.log(li);
 // console.log(li[1]);
 // li[1].textContent = 'Hello 2';
@@ -79,9 +79,74 @@ var li = document.getElementsByTagName('li');
 //     li[i].style.backgroundColor = 'grey';
 // }
 
-//added new li tag and made changes //
-li[4].style.backgroundColor = 'green';
+// Sharpener Task : added new li tag and made changes //
+// li[4].style.backgroundColor = 'green';
 
-var item = document.getElementsByClassName('list-group-item1');
-item[0].style.fontWeight = 'bold';
+// var item = document.getElementsByClassName('list-group-item1');
+// console.log(item)
+// item[0].style.fontWeight = 'bold';
 //-----------------//
+
+// QUERYSELECTOR //
+// using ID name //
+// var header = document.querySelector('#main-header');
+// header.style.borderBottom = 'solid 4px #ccc'
+
+// using tag name //
+// var input = document.querySelector('input');
+// input.value = 'Hello World';
+
+// please note that submit is also input tag but hello world reflects only in text box
+
+//we can also change submit value 
+// var submit = document.querySelector('input[type="submit"]');
+// submit.value = 'SEND';
+
+// using classname //
+// var item = document.querySelector('.list-group-item');
+// item.style.color = 'red'; // changes to red only for first item
+
+// changing color of lastchild 
+// var lastChild = document.querySelector('.list-group-item:last-child');
+// lastChild.style.color = 'blue';
+
+// changing color of nth child
+// var secondChild = document.querySelector('.list-group-item:nth-child(2)');
+// secondChild.style.color = 'coral';
+
+// QUERYSELECTORALL //
+// var titles = document.querySelectorAll('.title');
+// console.log(titles);
+// titles[0].textContent = 'Hello';
+
+// using queryselectorall we can change colors alteratively to the list elements
+// var odd = document.querySelectorAll('li:nth-child(odd)');
+// var even = document.querySelectorAll('li:nth-child(even)');
+
+// for(var i=0;i<odd.length;i++)
+// {
+//     odd[i].style.backgroundColor = '#f4f4f4';
+//     even[i].style.backgroundColor = '#ccc';
+// }
+
+// Sharpener Task //
+// Make the 2nd item have green background color //
+var secondList = document.querySelector('.list-group-item:nth-child(2)');
+secondList.style.backgroundColor = 'green';
+
+// Make the 3rd item invisible //
+var thirdList = document.querySelector('.list-group-item:nth-child(3)');
+thirdList.style.display = 'none'; 
+
+// Using QuerySelectorALL change the font color to green for 2nd item in the item list //
+
+var lists = document.querySelectorAll('.list-group-item');
+lists[1].style.color = 'green';
+
+// Choose all the odd elements and make their background green using QuerySelectorALL﻿ //
+var odd = document.querySelectorAll('li:nth-child(odd)');
+for(var i =0;i<odd.length;i++)
+{
+    odd[i].style.backgroundColor = 'green';
+}
+
