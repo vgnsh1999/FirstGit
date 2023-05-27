@@ -32,9 +32,32 @@
 // headerTitle.innerHTML = '<h3>Hello</h3>'
 
 // STYLING PART //
-var header = document.getElementById('main-header');
-header.style.borderBottom = 'solid 3px #000'
-var addItem = document.getElementsByClassName('title');
-addItem[0].style.fontWeight = 'bold';
-addItem[0].style.backgroundColor = 'green'
+// var header = document.getElementById('main-header');
+// header.style.borderBottom = 'solid 3px #000'
+// var addItem = document.getElementsByClassName('title');
+// addItem[0].style.fontWeight = 'bold';
+// addItem[0].style.backgroundColor = 'green'
 
+// GETELEMENTBYCLASSNAME //
+var items = document.getElementsByClassName('list-group-item');
+// console.log(items);
+// console.log(items[1]);
+// items[1].textContent = 'Hello 2';
+// items[1].style.fontWeight = 'bold';
+// items[1].style.backgroundColor = 'yellow';
+
+// this will not work and give error as items is a collection of array so we need to use //
+// looping statement to change the color //
+//items.style.backgroundColor = 'grey'; // dom.js:51 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+// at dom.js:51:29 
+
+// for(var i=0; i<items.length;i++)
+// {
+//     items[i].style.backgroundColor = 'grey';
+// }
+
+items[2].style.backgroundColor = 'green';
+for(var i=0;i<items.length;i++)
+{
+    items[i].style.fontWeight = 'bold';
+}
