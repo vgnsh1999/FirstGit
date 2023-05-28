@@ -51,11 +51,16 @@ function onsignup(event){
 function showUserOnScreen(myObj)
 {
     var parentElement = document.getElementById('listofitems');
-    parentElement.innerHTML = parentElement.innerHTML + `<li id='list'>${myObj.userName}-${myObj.emailId} <input type ='button' value='Delete' id='del'></li>`;
+    parentElement.innerHTML = parentElement.innerHTML + `<li id='list'>${myObj.userName}-${myObj.emailId} <input type ='button' value='Edit' id='edit'><input type ='button' value='Delete' id='del'></li>`;
 
     //deleting the elements both in display and localstorage
-    document.getElementById("del").onclick = function() {
-        document.getElementById("list").remove();
-        localStorage.removeItem(document.querySelector('#email').value);
-    }
+document.getElementById("del").onclick = function() {
+    document.getElementById("list").remove();
+    localStorage.removeItem(document.querySelector('#email').value);
+} 
+
+   //editing feature
+   document.getElementById('edit').onclick = function() {
+    localStorage.removeItem(document.querySelector('#email').value);
+   }
 }
