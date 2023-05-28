@@ -47,8 +47,15 @@ function onsignup(event){
     // li[i].value = "name:"+document.querySelector('#name').value+" "+"email:"+document.querySelector('#email').value;
     // }
 }
+//display funtion
 function showUserOnScreen(myObj)
 {
     var parentElement = document.getElementById('listofitems');
-    parentElement.innerHTML = parentElement.innerHTML + `<li>${myObj.userName}-${myObj.emailId}`;
+    parentElement.innerHTML = parentElement.innerHTML + `<li id='list'>${myObj.userName}-${myObj.emailId} <input type ='button' value='Delete' id='del'></li>`;
+
+    //deleting the elements both in display and localstorage
+    document.getElementById("del").onclick = function() {
+        document.getElementById("list").remove();
+        localStorage.removeItem(document.querySelector('#email').value);
+    }
 }
